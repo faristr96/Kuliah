@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8FD80BA1-94AF-0A87-6CCC-DD3315EE2953" name="order">
+<createdBy>faris</createdBy>
+<createdTime>2023-03-27 22:57:41 UTC</createdTime>
+<generatorID>30C118AF-DD90-3141-028B-E61EC5C3F2E3</generatorID>
+<ownerDesignName>modul1fix</ownerDesignName>
+<engineerTo>
+<item key="5F63AF9D-D1D0-7C12-82EB-FCE594B222B2" value="true"/>
+<item key="69208902-D49F-3A34-BEF2-08DDD5A47FCE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="order id" id="6977B442-213C-E7BD-9F0B-C2C3D97E98FB">
+<createdBy>faris</createdBy>
+<createdTime>2023-03-27 22:57:41 UTC</createdTime>
+<generatorID>79052CFE-C023-D252-178F-DCF424354ACC</generatorID>
+<ownerDesignName>modul1fix</ownerDesignName>
+<engineerTo>
+<item key="5F63AF9D-D1D0-7C12-82EB-FCE594B222B2" value="true"/>
+<item key="69208902-D49F-3A34-BEF2-08DDD5A47FCE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>82AC733B-4047-4B05-E209-E44BD36ABB5A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="customer customer id" id="0391D2CB-CF63-3693-6284-F6901332458A">
+<createdBy>faris</createdBy>
+<createdTime>2023-03-27 22:57:41 UTC</createdTime>
+<generatorID>BFB55AED-FDCA-EC39-555E-FF844EE2A025</generatorID>
+<ownerDesignName>modul1fix</ownerDesignName>
+<engineerTo>
+<item key="5F63AF9D-D1D0-7C12-82EB-FCE594B222B2" value="true"/>
+<item key="69208902-D49F-3A34-BEF2-08DDD5A47FCE" value="true"/>
+</engineerTo>
+<referedAttribute>9A8A7E1B-B97D-EDF1-94F7-85C041095490</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>82AC733B-4047-4B05-E209-E44BD36ABB5A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="order date" id="0EE4E97B-388C-9AC1-F971-E965E4745561">
+<createdBy>faris</createdBy>
+<createdTime>2023-03-27 22:57:41 UTC</createdTime>
+<generatorID>267C54FB-8F9B-48A6-AF8F-9FA4F664AC90</generatorID>
+<ownerDesignName>modul1fix</ownerDesignName>
+<engineerTo>
+<item key="5F63AF9D-D1D0-7C12-82EB-FCE594B222B2" value="true"/>
+<item key="69208902-D49F-3A34-BEF2-08DDD5A47FCE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>62AD33E3-23BA-741E-C6E0-D505B1ECD3BB</domain>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Status" id="117F7413-DCC1-9D66-35EA-7EA759FF3291">
+<createdBy>faris</createdBy>
+<createdTime>2023-03-27 22:57:41 UTC</createdTime>
+<generatorID>96815C7B-6774-0EA7-CFCD-D52F0E9C6D3B</generatorID>
+<ownerDesignName>modul1fix</ownerDesignName>
+<engineerTo>
+<item key="5F63AF9D-D1D0-7C12-82EB-FCE594B222B2" value="true"/>
+<item key="69208902-D49F-3A34-BEF2-08DDD5A47FCE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9DD625D3-2845-6B76-C6E2-87787640D3B1" name="order PK">
+<createdBy>faris</createdBy>
+<createdTime>2023-03-27 22:57:41 UTC</createdTime>
+<generatorID>813BAA64-71B1-AD7C-AB2C-B1A510E17D7C</generatorID>
+<ownerDesignName>modul1fix</ownerDesignName>
+<engineerTo>
+<item key="5F63AF9D-D1D0-7C12-82EB-FCE594B222B2" value="true"/>
+<item key="69208902-D49F-3A34-BEF2-08DDD5A47FCE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6977B442-213C-E7BD-9F0B-C2C3D97E98FB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

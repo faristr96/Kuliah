@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="cashless_payment_FK" directorySegmentName="seg_0" id="635060C6-5A43-570C-0334-FB52A5AC4522">
+<createdBy>faris</createdBy>
+<createdTime>2023-03-27 22:57:41 UTC</createdTime>
+<generatorID>888A3345-74FE-E7A7-42B1-EE513DD1D7A6</generatorID>
+<ownerDesignName>modul1fix</ownerDesignName>
+<engineerTo>
+<item key="5F63AF9D-D1D0-7C12-82EB-FCE594B222B2" value="true"/>
+<item key="69208902-D49F-3A34-BEF2-08DDD5A47FCE" value="true"/>
+</engineerTo>
+<sourcePk>0952E169-090C-C10B-DFF6-16650F5F862F</sourcePk>
+<arc>A9A58DC1-E340-C1DF-A334-67A2CFBD5F06</arc>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0460EF9B-EFEE-02B3-9BA9-E0E61566063C</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B1AC92B8-0386-7BF2-E9B4-1B73C63B874C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
