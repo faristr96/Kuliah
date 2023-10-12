@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PENJUMLAHAN BILANGAN</title>
+  <style>
+    main {
+      display: flex;
+      align-items: center;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>PENJUMLAHAN BILANGAN</h1>
+  <main>
+    <section>
+      <label for="bilanganPertama">Bilangan Pertama:</label>
+      <input type="number" id="bilanganPertama" name="bilanganPertama">
+    </section>
+    <section>
+      <label for="bilanganKedua">Bilangan Kedua:</label>
+      <input type="number" id="bilanganKedua" name="bilanganKedua">
+    </section>
+  </main>
+  <button onclick="jumlahkan()">Jumlahkan</button>
+  <button onclick="reloadPage()">Ulangi</button>
+
+  <script>
+    function jumlahkan() {
+      const bilanganPertama = document.getElementById('bilanganPertama').value;
+      const bilanganKedua = document.getElementById('bilanganKedua').value;
+      if (bilanganPertama === '' || bilanganKedua === '') {
+        alert("harus diisi semua bang");
+      } else {
+        var hasil = parseFloat(bilanganPertama) + parseFloat(bilanganKedua);
+        alert("Hasil Penjumlahan = "+ hasil);
+      }
+    }
+
+    function reloadPage() {
+      location.reload();
+    }
+  </script>
+</body>
+
+</html>

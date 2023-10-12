@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Formulir Pendaftaran</title>
+  <style>
+    body {
+      background-color: rgba(52, 152, 219);
+    }
+
+    .form-container {
+      background-color: white;
+      width: 300px;
+      padding: 20px;
+      margin: 200px auto;
+      box-shadow: 0px 0px 10px 0px grey;
+      border-radius: 20px;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+
+    .form-container button {
+      background-color: rgba(52, 152, 219);
+      color: white;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border: none;
+      cursor: pointer;
+      width: 30%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-container">
+    <form id="myForm">
+      <label for="nama">Nama Lengkap:</label><br>
+      <input type="text" id="nama" name="nama"><br>
+      <label for="email">Email:</label><br>
+      <input type="text" id="email" name="email"><br>
+      <label for="alamat">Alamat:</label><br>
+      <input type="text" id="alamat" name="alamat"><br>
+      <button type="submit">Daftar</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var nama = document.getElementById('nama').value;
+      var email = document.getElementById('email').value;
+      var alamat = document.getElementById('alamat').value;
+
+      if (nama === '' || email === '' || alamat === '') {
+        alert("Diisi Kabeh Coy");
+      } else {
+        alert('Nama Lengkap: ' + nama + '\n\nEmail: ' + email + '\n\nAlamat: ' + alamat);
+      }
+    });
+  </script>
+</body>
+
+</html>
