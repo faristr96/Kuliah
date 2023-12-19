@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="card text-bg-primary mb-3">
+            <div class="card-header bg-primary">
+                <h5 class="card-title">Add Activity</h5>
+            </div>
+            <div class="card-body">
+                <label class="form-label">Activity</label>
+                <div class="input-group mb-3">
+                    <input type="text" id="taskInput" class="form-control" placeholder="Tambahkan tugas">
+                    <div class="input-group-append">
+                        <button class="btn btn-success" onclick="addTask()">Tambah</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card text-bg-primary mb-3">
+            <div class="card-header bg-success">
+                <h5 class="card-title">Add Activity</h5>
+            </div>
+            <div class="card-body">
+                <div class="row" id="taskList">
+                    
+                </div>
+                <ul class="list-group">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // script.js
+        let tasks = [];
+        let editingTaskIndex = -1;
+
+        function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            const taskList = document.getElementById('taskList');
+
+            const taskText = taskInput.value.trim();
+            if (taskText === '') return;
+
+            if (editingTaskIndex === -1) {
+                tasks.push(taskText);
+            } else {
+                tasks[editingTaskIndex] = taskText;
+                editingTaskIndex = -1;
+            }
+
+            taskInput.value = '';
+            displayTasks();
+        }
+
+        function editTask(index) {
+            editingTaskIndex = index;
+            const taskInput = document.getElementById('taskInput');
+            taskInput.value = tasks[index];
+            displayTasks();
+        }
+
+        function deleteTask(index) {
+            tasks.splice(index, 1);
+            displayTasks();
+        }
+
+        function displayTasks() {
+            const taskList = document.getElementById('taskList');
+            taskList.innerHTML = '';
+
+            for (let i = 0; i < tasks.length; i++) {
+                const taskCard = document.createElement('div');
+                taskCard.className = 'col-12';
+                taskCard.innerHTML = `
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Tugas ${i + 1}</h5>
+                    <p class="card-text">${tasks[i]}</p>
+                    <a href="#" class="btn btn-primary" onclick="editTask(${i})">Edit</a>
+                    <a href="#" class="btn btn-danger" onclick="deleteTask(${i})">Delete</a>
+                </div>
+            </div>
+        `
+                taskList.appendChild(taskCard);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -17,7 +17,7 @@ class ProductController {
         // Panggil fungsi get all product
         $response = $productModel->findAll();
         // Return $response dengan melakukan formatting terlebih dahulu menggunakan trait yang sudah dipanggil
-        return $this->apiResponse(200, "success", $response);
+            return $this->apiResponse(200, "success", $response);
     }
 
     public function getById($id) {

@@ -50,7 +50,7 @@ class Product extends DatabaseConfig {
 
     // Proses insert data
     public function create($data) {
-        $productName = $data["product_name"];
+        $nama = $data["product_name"];
         $query = "INSERT INTO products (product_name) VALUES (?)";
         $stmt = $this->conn->prepare($query);
         $stmt->bind_param("s", $productName);
@@ -79,4 +79,6 @@ class Product extends DatabaseConfig {
         $stmt->execute();
         $this->conn->close();
     }
+
+    public function joinMhs(){}
 }

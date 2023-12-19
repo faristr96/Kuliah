@@ -2,9 +2,9 @@
 
 header("Content-Type: application/json; charset=UTF-8");
 
-include "app/routes/"
+include "app/routes/mahasiswaRoutes.php";
 
-use App\Routes\ProductRoutes;
+use app\routes\MahasiswaRoutes;
 
 // Tangkap Request method
 $method = $_SERVER["REQUEST_METHOD"];
@@ -12,5 +12,5 @@ $method = $_SERVER["REQUEST_METHOD"];
 $path = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 
 // Panggil routes
-$productRoute = new ProductRoutes();
-$productRoute->handle($method, $path);
+$mahasiswaRoutes = new MahasiswaRoutes();
+$mahasiswaRoutes->handle($method, $path);
